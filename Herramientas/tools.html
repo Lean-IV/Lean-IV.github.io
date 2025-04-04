@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Herramientas</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Contenedor principal de herramientas -->
+    <div class="tools-container">
+        <!-- Botones con imágenes -->
+        <div class="tools-buttons">
+            <button class="tool-button tools-button" id="btn-home" onclick="location.href='../index.html'">
+                <img src="../assets/images/home-icon.png" alt="Inicio" class="tool-image">
+            </button>
+            <button class="tool-button tools-button" id="btn-c">
+                <img src="../assets/images/c-logo.png" alt="C" class="tool-image">
+            </button>
+            <button class="tool-button tools-button" id="btn-python">
+                <img src="../assets/images/python-logo.png" alt="Python" class="tool-image">
+            </button>
+            <button class="tool-button tools-button" id="btn-java">
+                <img src="../assets/images/java-logo.png" alt="Java" class="tool-image">
+            </button>
+            <button class="tool-button tools-button" id="btn-mysql">
+                <img src="../assets/images/mysql-logo.png" alt="MySQL" class="tool-image">
+            </button>
+            <button class="tool-button tools-button" id="btn-excel">
+                <img src="../assets/images/excel-logo.png" alt="Excel" class="tool-image">
+            </button>
+            <button class="tool-button tools-button" id="btn-tableau">
+                <img src="../assets/images/tableau-logo.svg" alt="Tableau" class="tool-image">
+            </button>
+        </div>
+    </div>
+
+    <!-- Contenedor dinámico del contenido PDF -->
+    <div class="content-section" id="content-pdf">
+        <h2 id="pdf-title">Título del PDF</h2>
+        <div id="pdf-render"></div>
+    </div>
+
+    <script src="../script.js"></script>
+
+</body>
+
+</html>

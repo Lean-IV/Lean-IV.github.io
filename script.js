@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
         'btn-java': '../../assets/pdf/Java.pdf',
         'btn-mysql': '../../assets/pdf/MySQL.pdf',
         'btn-excel': '../../assets/pdf/Excel.pdf',
-        'btn-tableau': '../../assets/pdf/Tableau.pdf',
+        'btn-tableau': '../../assets/pdf/Proyecto Final Leandro Vera.pdf',
     };
 
     pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js';
@@ -55,4 +55,5 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
+
 });

@@ -1,36 +1,40 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const buttons = document.querySelectorAll('.tool-button'); // Todos los botones
-    const pdfRender = document.getElementById('pdf-render'); // Contenedor para renderizar PDFs
-    const pdfTitle = document.getElementById('pdf-title'); // Título dinámico del PDF
+    const buttons = document.querySelectorAll('.tool-button:not(#btn-home)');
+    const pdfRender = document.getElementById('pdf-render');
+    const pdfTitle = document.getElementById('pdf-title');
+    const targetContent = document.getElementById('content-pdf');
 
     const pdfPaths = {
-        'btn-c': '../../assets/pdf/C.pdf',
-        'btn-python': '../../assets/pdf/Python.pdf',
-        'btn-java': '../../assets/pdf/Java.pdf',
-        'btn-mysql': '../../assets/pdf/MySQL.pdf',
-        'btn-excel': '../../assets/pdf/Excel.pdf',
-        'btn-tableau': '../../assets/pdf/Tableau.pdf',
-        'btn-powerBi': '../../assets/pdf/Proyecto Final Leandro Vera.pdf',
+        'btn-c': '../assets/pdf/C.pdf',
+        'btn-python': '../assets/pdf/Python.pdf',
+        'btn-java': '../assets/pdf/Java.pdf',
+        'btn-mysql': '../assets/pdf/MySQL.pdf',
+        'btn-excel': '../assets/pdf/Excel.pdf',
+        'btn-tableau': '../assets/pdf/Tableau.pdf',
+        'btn-powerBi': '../assets/pdf/Proyecto Final Leandro Vera.pdf',
     };
 
-    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js';
+    pdfjsLib.GlobalWorkerOptions.workerSrc =
+        'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js';
 
     buttons.forEach(button => {
         button.addEventListener('click', function () {
-            const targetContent = document.getElementById('content-pdf'); // Contenedor fijo
-            if (targetContent) {
-                targetContent.classList.add('visible');
-                targetContent.scrollIntoView({ behavior: 'smooth', block: 'start' }); // Scroll suave
+            const pdfUrl = pdfPaths[button.id];
+            const title = button.querySelector('img').alt;
+
+            if (!pdfUrl) {
+                console.log('No se encontró PDF para:', button.id);
+                return;
             }
 
-            const pdfUrl = pdfPaths[button.id]; // Obtiene el PDF según el botón clicado
-            const title = button.querySelector('img').alt; // Usa el texto alternativo de la imagen para el título
+            targetContent.classList.add('visible');
+            pdfTitle.textContent = `Conocimientos en ${title}`;
+            pdfRender.innerHTML = '';
 
-            if (pdfUrl) {
-                pdfTitle.textContent = `Conocimientos en ${title}`; // Actualiza el título dinámicamente
-                pdfRender.innerHTML = ''; // Limpia cualquier contenido previo
+            targetContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-                pdfjsLib.getDocument(pdfUrl).promise.then(function (pdf) {
+            pdfjsLib.getDocument(pdfUrl).promise
+                .then(function (pdf) {
                     for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
                         pdf.getPage(pageNum).then(function (page) {
                             const canvas = document.createElement('canvas');
@@ -48,14 +52,11 @@ document.addEventListener('DOMContentLoaded', function () {
                             });
                         });
                     }
-                }).catch(function (error) {
+                })
+                .catch(function (error) {
                     console.error('Error al cargar el PDF:', error);
+                    pdfTitle.textContent = `No se pudo cargar el PDF de ${title}`;
                 });
-            } else {
-                console.log('No se encontró PDF para:', button.id);
-            }
         });
     });
-
 });
-

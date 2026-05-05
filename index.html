@@ -10,30 +10,295 @@
 
 <body class="home-page">
 
-    <div class="container">
+    <main class="container">
         <!-- Foto y título -->
-        <div class="profile">
-            <img src="assets/images/FotoCV.jpeg" alt="Vera Leandro">
+        <section class="profile">
+            <img src="assets/images/fotoperfil.jpeg" alt="Foto de Vera Leandro">
 
             <div class="profile-text">
                 <h1>Leandro Vera</h1>
-                <h2>
-                    Estudiante avanzado de Ingeniería en Sistemas, con interés en desarrollarme en el área IT.
+                <h2>Estudiante de Licenciatura en Sistemas</h2>
+                <p>
+                    Estudiante avanzado de Licenciatura en Sistemas, con interés en desarrollarme en el área IT.
                     Actualmente me encuentro profundizando conocimientos en desarrollo backend, APIs y herramientas
                     relacionadas a datos, mientras busco mi primera oportunidad profesional.
                     Me destaco por la capacidad de aprendizaje, la resolución de problemas y la responsabilidad en el
                     trabajo.
-                </h2>
+                </p>
             </div>
-        </div>
+        </section>
 
         <!-- Botones debajo de la foto y título -->
-        <div class="index-buttons">
-            <a class="index-button" href="assets/pdf/Leandro_Vera_CV.pdf" target="_blank">CV</a>
-            <a class="index-button" href="Herramientas/tools.html">Conocimientos</a>
-            <a class="index-button" href="https://github.com/Lean-IV" target="_blank">Proyectos</a>
+        <nav class="nav-buttons">
+            <button class="nav-link" type="button" data-modal="conocimientos">Conocimientos</button>
+            <button class="nav-link" type="button" data-modal="proyectos">Proyectos</button>
+            <a class="nav-link" href="assets/pdf/Leandro_Vera_CV.pdf" target="_blank">CV</a>
+        </nav>
+    </main>
+    <section id="modal-conocimientos" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="close-modal" type="button" aria-label="Cerrar ventana">×</button>
+
+            <h2>Conocimientos</h2>
+
+            <p>Herramientas, tecnologías y conceptos que uso para resolver problemas.</p>
+
+            <h3 class="section-title">Conocimientos técnicos</h3>
+            <div class="cards-grid">
+
+                <article class="card">
+                    <img src="assets/icons/java-logo.png" alt="Java">
+                    <h4>Java</h4>
+                    <p>
+                        Programación en Java aplicando programación orientada a objetos (encapsulamiento, manejo de
+                        objetos), organización del código en clases y métodos, y uso de estructuras de control,
+                        colecciones y manejo de errores para desarrollar lógica de negocio.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <img src="assets/icons/mysql-logo.png" alt="MySQL">
+                    <h4>MySQL</h4>
+                    <p>
+                        Diseño y gestión de bases de datos relacionales en MySQL, incluyendo modelado de entidades,
+                        relaciones mediante claves primarias y foráneas, y desarrollo de consultas SQL con JOINs,
+                        filtros y agregaciones para organizar y obtener información relevante.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <img src="assets/icons/c-logo.png" alt="C">
+                    <h4>C</h4>
+                    <p>
+                        Programación en C aplicando lógica estructurada, uso de punteros, memoria dinámica y
+                        estructuras de datos. Organización modular del código y resolución de problemas, incluyendo
+                        comprensión de conceptos de concurrencia y su aplicación según el contexto.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <img src="assets/icons/powerBi-logo.png" alt="Power BI">
+                    <h4>Power BI</h4>
+                    <p>
+                        Modelado de datos y creación de dashboards interactivos en Power BI. Uso de DAX para generar
+                        medidas y KPIs, diseño de visualizaciones con enfoque en storytelling y análisis de datos
+                        para detectar patrones y apoyar la toma de decisiones.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <img src="assets/icons/tableau-logo.svg" alt="Tableau">
+                    <h4>Tableau</h4>
+                    <p>
+                        Creación de dashboards interactivos en Tableau orientados a la exploración de datos y toma
+                        de decisiones. Desarrollo de visualizaciones avanzadas, uso de campos calculados y
+                        parámetros, y diseño de tableros con enfoque en storytelling y experiencia de usuario.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <img src="assets/icons/excel-logo.png" alt="Excel">
+                    <h4>Excel</h4>
+                    <p>
+                        Análisis de datos en Excel mediante limpieza y normalización de información,
+                        uso de funciones avanzadas y tablas dinámicas. Creación de dashboards
+                        interactivos orientados a responder preguntas de negocio.
+                    </p>
+                </article>
+            </div>
+
+            <h3 class="section-title">Conocimientos complementarios</h3>
+            <div class="cards-grid">
+
+                <article class="card">
+                    <h4>Gestión de proyectos</h4>
+                    <p>
+                        Planificación y organización de tareas utilizando herramientas como
+                        diagramas de Gantt, PERT y estimación (COCOMO).
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h4>Soporte técnico y redes</h4>
+                    <p>
+                        Armado y mantenimiento de equipos, instalación de sistemas,
+                        resolución de problemas de hardware y software y conceptos básicos de redes.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h4>Concurrencia (conceptual)</h4>
+                    <p>
+                        Comprensión de los principios de concurrencia y análisis de cuándo
+                        aplicar estas técnicas para optimizar soluciones.
+                    </p>
+                </article>
+            </div>
+
+            <div class="extra-info">
+                <p>
+                    Me encuentro en constante aprendizaje y siempre abierto a nuevas ideas,
+                    mejoras y oportunidades para seguir creciendo en el área.
+                    Podés contactarme o conectar conmigo en LinkedIn.
+                </p>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <section id="modal-proyectos" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="close-modal" type="button" aria-label="Cerrar ventana">×</button>
+
+            <h2>Proyectos</h2>
+            <p>Trabajos y proyectos donde aplico mis conocimientos.</p>
+
+            <div class="cards-grid">
+
+                <article class="card project-card featured-main">
+                    <span class="badge main">Proyecto destacado</span>
+                    <h4>Comparación de árboles binarios: concurrente vs secuencial</h4>
+                    <p>
+                        Trabajo práctico desarrollado en C donde se analiza el rendimiento de un algoritmo
+                        de árboles binarios ejecutado de forma secuencial y concurrente. Se investigó el uso
+                        de hilos en C y se aplicaron conceptos de programación concurrente para evaluar en qué
+                        escenarios la concurrencia mejora el rendimiento y en cuáles no.
+                        Se concluye que la concurrencia no siempre mejora el rendimiento, dependiendo del
+                        tamaño del problema y el costo de sincronización.
+                    </p>
+                    <div class="project-tags">
+                        <span>C</span>
+                        <span>Concurrencia</span>
+                        <span>Threads</span>
+                        <span>Árboles binarios</span>
+                        <span>Análisis de rendimiento</span>
+                    </div>
+                    <a class="project-link" href="https://github.com/Lean-IV/arboles-concurrentes-c" target="_blank">
+                        Ver repositorio
+                    </a>
+                </article>
+
+                <article class="card project-card featured">
+                    <span class="badge">Destacado</span>
+                    <h4>Sistema de recaudación de congreso</h4>
+                    <p>
+                        Proyecto académico desarrollado en Java para modelar la recaudación de un congreso,
+                        gestionando personas, auspiciantes, conferencias, entradas y espectadores.
+                        El foco está puesto en la aplicación de Programación Orientada a Objetos,
+                        separación de responsabilidades y reglas de negocio.
+                    </p>
+                    <div class="project-tags">
+                        <span>Java</span>
+                        <span>POO</span>
+                        <span>ArrayList</span>
+                        <span>Validaciones</span>
+                    </div>
+                    <a class="project-link" href="https://github.com/Lean-IV/recaudacion-congreso-java" target="_blank">
+                        Ver repositorio
+                    </a>
+                </article>
+
+                <article class="card project-card featured">
+                    <span class="badge">Destacado</span>
+                    <h4>Sistema de gestión de vuelos</h4>
+                    <p>
+                        Proyecto académico desarrollado en SQL para diseñar y consultar una base de datos relacional
+                        orientada a la gestión de vuelos, pasajeros, pilotos, aeropuertos y aviones. Incluye creación
+                        del modelo, carga de datos y consultas para obtener información relevante del sistema.
+                    </p>
+                    <div class="project-tags">
+                        <span>SQL</span>
+                        <span>MySQL</span>
+                        <span>DER</span>
+                        <span>JOINs</span>
+                        <span>GROUP BY</span>
+                    </div>
+                    <a class="project-link" href="https://github.com/Lean-IV/sistema-vuelos-sql" target="_blank">
+                        Ver repositorio
+                    </a>
+                </article>
+
+                <article class="card project-card">
+                    <h4>Sistema de inscripción de materias</h4>
+                    <p>
+                        Proyecto académico desarrollado en C que simula un sistema de inscripción de alumnos
+                        a materias con cupos limitados. Permite gestionar inscripciones directas, colas de espera
+                        e historial de materias aprobadas, aplicando estructuras de datos dinámicas y diseño modular.
+                    </p>
+                    <div class="project-tags">
+                        <span>C</span>
+                        <span>Listas enlazadas</span>
+                        <span>Colas</span>
+                        <span>TDAs</span>
+                        <span>Punteros</span>
+                    </div>
+                    <a class="project-link" href="https://github.com/Lean-IV/sistema-inscripciones-c" target="_blank">
+                        Ver repositorio
+                    </a>
+                </article>
+
+                <article class="card project-card">
+                    <h4>Sistema de gestión inmobiliaria</h4>
+                    <p>
+                        Proyecto académico desarrollado en Java que modela la gestión de propiedades,
+                        clientes y operaciones dentro de una inmobiliaria. Se centra en la organización
+                        de entidades del dominio y la aplicación de lógica de negocio mediante
+                        programación orientada a objetos.
+                    </p>
+                    <div class="project-tags">
+                        <span>Java</span>
+                        <span>POO</span>
+                        <span>Modelado</span>
+                        <span>Lógica de negocio</span>
+                    </div>
+                    <a class="project-link" href="https://github.com/Lean-IV/sistema-inmobiliaria-java" target="_blank">
+                        Ver repositorio
+                    </a>
+                </article>
+
+                <article class="card project-card">
+                    <h4>Sistema de bingo</h4>
+                    <p>
+                        Proyecto desarrollado en C que simula el funcionamiento de un juego de bingo,
+                        gestionando números, cartones y lógica de juego. Se centra en la implementación
+                        de lógica estructurada, control de flujo y manejo de datos dentro de un entorno
+                        procedural.
+                    </p>
+                    <div class="project-tags">
+                        <span>C</span>
+                        <span>Lógica estructurada</span>
+                        <span>Simulación</span>
+                        <span>Arrays</span>
+                    </div>
+                    <a class="project-link" href="https://github.com/Lean-IV/sistema-bingo-c" target="_blank">
+                        Ver repositorio
+                    </a>
+                </article>
+
+                <article class="card project-card">
+                    <h4>Sistema de gestión de torneo de fútbol</h4>
+                    <p>
+                        Proyecto grupal desarrollado en Java orientado a la gestión de torneos,
+                        incluyendo equipos, partidos y organización de fixtures. Participé en el
+                        desarrollo de partes específicas del sistema, colaborando en la implementación
+                        de lógica y pruebas del funcionamiento general.
+                    </p>
+                    <div class="project-tags">
+                        <span>Java</span>
+                        <span>POO</span>
+                        <span>Trabajo en equipo</span>
+                    </div>
+                    <a class="project-link" href="https://github.com/Lean-IV/sistema-torneo-futbol-java"
+                        target="_blank">
+                        Ver repositorio
+                    </a>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
 
     <!-- Pie de página -->
     <footer>
@@ -42,6 +307,7 @@
         <a href="mailto:lean.ivan.vera@gmail.com">Email</a>
     </footer>
 
+    <script src="js/script.js"></script>
 </body>
 
 </html>

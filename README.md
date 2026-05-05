@@ -2,7 +2,7 @@
 
 
 
-&#x20;Ver sitio: https://lean-iv.github.io/
+Ver sitio: https://lean-iv.github.io/
 
 
 
